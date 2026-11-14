@@ -1,0 +1,1005 @@
+# Buoi01_DeQuy
+
+
+- Họ tên: Phạm Quốc Hiếu
+- MSV: 10125129
+- Lớp: 124251
+
+## Bài đã làm
+
+### chương1
+
+| Bài | Nội dung |
+|---|---|
+|1 |Sinh mảng 1000 số nguyên ngẫu nhiên trong khoảng 1..999, tìm số lớn nhất và nhỏ nhất|
+|2| FizzBuzz từ 1 đến 100|
+|3| Nhập chuỗi các phần tử cách nhau bởi dấu phẩy, đảo ngược thứ tự các phần tử|
+|4| Sinh mảng 1000 số ngẫu nhiên trong khoảng 1..10000, in mảng (20 số mỗi dòng), sắp xếp chọn rồi in lại|
+|5| Nhập n, tính số Fibonacci thứ n bằng vòng lặp|
+
+### chương2
+
+| Bài | Nội dung |
+|---|---|
+|1| Tháp Hà Nội bằng đệ quy, đếm số bước và so sánh với 2^n - 1|
+|2|Tìm kiếm tuần tự và tìm kiếm nhị phân, so sánh thời gian với n = 10^5, 10^6, 10^7|
+|3|Kiểm tra số nguyên tố: giải thuật 1 (duyệt đến n - 1) và giải thuật 2 (duyệt đến căn n), so sánh thời gian|
+|4|Liệt kê số hoàn hảo nhỏ hơn N: giải thuật 1 (duyệt đến i - 1) và giải thuật 2 (duyệt đến căn i), so sánh thời gian|
+|5|Số Fibonacci thứ n: đệ quy và vòng lặp, so sánh thời gian|
+|6|Sắp xếp nổi bọt và sắp xếp chèn trên mảng số thực, so sánh thời gian với n = 1000 đến 20000|
+
+### chương3
+
+| Bài | Nội dung |
+|---|---|
+|1|	S(n) = 1 + 2 + 3 + ... + n|
+|2|	S(n) = 1² + 2² + 3² + ... + n²|
+|3|	S(n) = 1 + 1/2 + 1/3 + ... + 1/n|
+|4|	S(x,n) = x^n, hỗ trợ n âm|
+|5|	Tìm ước lẻ lớn nhất của n|
+|6|	Tìm ước chung lớn nhất của a và b (thuật toán Euclid)|
+|7|	Đếm số chữ số của n|
+|8|	S(n) = √(1 + √(2 + √(3 + ... + √n)))|
+
+## Lệnh chạy
+
+### chương1
+```bash
+docnet run 1
+docnet run 2
+docnet run 3
+docnet run 4
+docnet run 5
+```
+
+### chương2
+```bash
+docnet run 6
+docnet run 7
+docnet run 8
+docnet run 9
+docnet run 10
+```
+
+### chương3
+```bash
+docnet run 11
+docnet run 12
+docnet run 13
+docnet run 14
+docnet run 15
+docnet run 16
+docnet run 17
+docnet run 19
+```
+
+## Kết quả chạy
+
+### chương1
+
+### bài1
+
+```csharp
+using System;
+
+namespace BTTH1
+{
+    static class B1C1
+    {
+        public static void Run()
+        {
+            int[] a = hamhotro.TaoMangNgauNhien(1000, 500);
+
+            Console.WriteLine("Mang vua tao:");
+            hamhotro.InMang(a);
+
+            int lonNhat = a[0];
+            int nhoNhat = a[0];
+
+            for (int i = 1; i < a.Length; i++)
+            {
+                if (a[i] > lonNhat)
+                    lonNhat = a[i];
+
+                if (a[i] < nhoNhat)
+                    nhoNhat = a[i];
+            }
+
+            Console.WriteLine("So lon nhat: " + lonNhat);
+            Console.WriteLine("So nho nhat: " + nhoNhat);
+        }
+    }
+}
+```
+#### kết quả
+
+```text
+Chọn bài: 1
+
+Mang vua tao:
+345 271 339 316 11 319 120 402 175 401 490 234 177 75 433 348 121 149 277 205 ... (1000 phan tu)
+So lon nhat: 499
+So nho nhat: 0
+```
+
+ ### bài2
+```csharp
+namespace BTTH1
+{
+    static class B2C1
+    {
+        public static void Run()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                string kq = "";
+
+                if (i % 3 == 0)
+                    kq += "Fizz";
+if (i % 5 == 0)
+                    kq += "Buzz";
+
+                if (kq == "")
+                    kq = i.ToString();
+
+                Console.WriteLine(kq);
+            }
+        }
+    }
+}
+
+```
+#### kết quả
+
+```text
+Chọn bài: 2
+
+1
+2
+Fizz
+4
+Buzz
+Fizz
+7
+8
+Fizz
+Buzz
+11
+Fizz
+13
+14
+FizzBuzz
+16
+17
+Fizz
+19
+Buzz
+Fizz
+22
+23
+Fizz
+Buzz
+26
+Fizz
+28
+29
+FizzBuzz
+31
+32
+Fizz
+34
+Buzz
+Fizz
+37
+38
+Fizz
+Buzz
+41
+Fizz
+43
+44
+FizzBuzz
+46
+47
+Fizz
+49
+Buzz
+Fizz
+52
+53
+Fizz
+Buzz
+56
+Fizz
+58
+59
+FizzBuzz
+61
+62
+Fizz
+64
+Buzz
+Fizz
+67
+68
+Fizz
+Buzz
+71
+Fizz
+73
+74
+FizzBuzz
+76
+77
+Fizz
+79
+Buzz
+Fizz
+82
+83
+Fizz
+Buzz
+86
+Fizz
+88
+89
+FizzBuzz
+91
+92
+Fizz
+94
+Buzz
+Fizz
+97
+98
+Fizz
+Buzz
+```
+
+ ### bài3
+```csharp
+namespace BTTH1
+{
+    static class B3C1
+    {
+        public static void Run()
+        {
+            Console.Write("Nhap chuoi: ");
+            string s = Console.ReadLine();
+
+            string kq = "";
+
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                kq += s[i];
+            }
+
+            Console.WriteLine("Chuoi dao nguoc: " + kq);
+        }
+    }
+}
+
+```
+
+#### kết quả
+
+```text
+Chọn bài: 3
+
+Nhap chuoi: 321
+Chuoi dao nguoc: 123
+```
+
+
+ ### bài4
+```csharp
+namespace BTTH1
+{
+    static class B4C1
+    {
+        public static void Run()
+        {
+            int[] a = hamhotro.TaoMangNgauNhien(1000, 500);
+
+            Console.WriteLine("Mang ban dau:");
+            hamhotro.InMang(a);
+
+            for (int i = 0; i < a.Length - 1; i++)
+            {
+                for (int j = 0; j < a.Length - 1 - i; j++)
+                {
+                    if (a[j] > a[j + 1])
+                        hamhotro.Swap(a, j, j + 1);
+                }
+            }
+
+            Console.WriteLine("Mang sau sap xep:");
+            hamhotro.InMang(a);
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 4
+
+Mang ban dau:
+230 255 348 52 178 489 102 308 203 410 429 475 188 93 122 65 149 175 263 228 ... (1000 phan tu)
+Mang sau sap xep:
+0 0 0 1 2 2 3 3 3 4 4 4 5 5 7 7 7 8 9 9 ... (1000 phan tu)
+```
+
+ ### bài5
+```csharp
+using System;
+
+namespace BTTH1
+{
+    static class B5_Fibo
+    {
+        static int FiboLap(int n)
+        {
+            if (n == 0) return 0;
+            if (n == 1) return 1;
+
+            int a = 0;
+            int b = 1;
+            int c = 0;
+
+            for (int i = 2; i <= n; i++)
+            {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+
+            return c;
+        }
+        static int FiboDeQuy(int n)
+        {
+            if (n == 0) return 0;
+            if (n == 1) return 1;
+
+            return FiboDeQuy(n - 1) + FiboDeQuy(n - 2);
+        }
+
+        public static void Run()
+        {
+            Console.Write("Nhap n: ");
+            int n = int.Parse(Console.ReadLine());
+
+            if (n < 0 || n > 40)
+            {
+                Console.WriteLine("Vui long nhap n tu 0 den 40!");
+                return;
+            }
+Console.WriteLine("Fibonacci bang vong lap: " + FiboLap(n));
+            Console.WriteLine("Fibonacci bang de quy: " + FiboDeQuy(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 5
+
+Nhap n: 3
+Fibonacci bang vong lap: 2
+Fibonacci bang de quy: 2
+```
+
+---
+
+
+### chương2
+
+
+ ### bài1
+```csharp
+namespace BTTH1
+{
+    static class B1C2
+    {
+        static void ThapHaNoi(int n, char A, char B, char C)
+        {
+            if (n == 1)
+            {
+                Console.WriteLine(A + " -> " + C);
+                return;
+            }
+
+            ThapHaNoi(n - 1, A, C, B);
+
+            Console.WriteLine(A + " -> " + C);
+
+            ThapHaNoi(n - 1, B, A, C);
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap so dia", 3);
+
+            if (n <= 0)
+            {
+                Console.WriteLine("So dia khong hop le!");
+                return;
+            }
+
+            ThapHaNoi(n, 'A', 'B', 'C');
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Nhap so dia (Enter = 3):
+A -> C
+A -> B
+C -> B
+A -> C
+B -> A
+B -> C
+A -> C
+```
+
+ ### bài2
+```csharp
+namespace BTTH1
+{
+    static class B2C2
+    {
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap so phan tu", 10);
+
+            if (n <= 0) return;
+
+            int[] a = hamhotro.TaoMangNgauNhien(n, 100);
+
+            for (int i = 0; i < a.Length - 1; i++)
+            {
+                for (int j = 0; j < a.Length - 1 - i; j++)
+                {
+                    if (a[j] > a[j + 1])
+                        hamhotro.Swap(a, j, j + 1);
+                }
+            }
+
+            Console.WriteLine("Mang sau sap xep:");
+            hamhotro.InMang(a);
+
+            int x = hamhotro.DocSo("Nhap so can tim", 5);
+
+            int dau = 0;
+            int cuoi = n - 1;
+            int vt = -1;
+
+            while (dau <= cuoi)
+            {
+                int giua = (dau + cuoi) / 2;
+
+                if (a[giua] == x)
+                {
+                    vt = giua;
+                    break;
+                }
+                else if (a[giua] < x)
+                    dau = giua + 1;
+                else
+                    cuoi = giua - 1;
+            }
+
+            if (vt == -1)
+                Console.WriteLine("Khong tim thay!");
+            else
+                Console.WriteLine("Tim thay tai vi tri: " + vt);
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 7
+
+Nhap so phan tu (Enter = 10):
+Mang sau sap xep:
+5 25 30 42 44 59 67 71 90 95
+Nhap so can tim (Enter = 5):
+Tim thay tai vi tri: 0
+```
+
+ ### bài3
+```csharp
+namespace BTTH1
+{
+    static class B3C2
+    {
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 17);
+
+            if (hamhotro.KiemTraNguyenTo(n))
+                Console.WriteLine(n + " la so nguyen to");
+            else
+                Console.WriteLine(n + " khong phai so nguyen to");
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 8
+Nhap n (Enter = 17):
+17 la so nguyen to
+```
+
+ ### bài4
+```csharp
+namespace BTTH1
+{
+    static class B4C2
+    {
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap N", 1000);
+
+            Console.WriteLine("Cac so hoan hao nho hon N:");
+
+            for (int i = 2; i < n; i++)
+            {
+                if (hamhotro.KiemTraHoanHao(i))
+                    Console.Write(i + " ");
+            }
+
+            Console.WriteLine();
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 9
+
+Nhap N (Enter = 1000):
+Cac so hoan hao nho hon N:
+6 28 496
+```
+
+ ### bài5 ( chương1 và 2)
+```csharp
+using System;
+
+namespace BTTH1
+{
+    static class B5_Fibo
+    {
+        static int FiboLap(int n)
+        {
+            if (n == 0) return 0;
+            if (n == 1) return 1;
+
+            int a = 0;
+            int b = 1;
+            int c = 0;
+
+            for (int i = 2; i <= n; i++)
+            {
+                c = a + b;
+                a = b;
+                b = c;
+            }
+
+            return c;
+        }
+        static int FiboDeQuy(int n)
+        {
+            if (n == 0) return 0;
+            if (n == 1) return 1;
+
+            return FiboDeQuy(n - 1) + FiboDeQuy(n - 2);
+        }
+
+        public static void Run()
+        {
+            Console.Write("Nhap n: ");
+            int n = int.Parse(Console.ReadLine());
+
+            if (n < 0 || n > 40)
+            {
+                Console.WriteLine("Vui long nhap n tu 0 den 40!");
+                return;
+            }
+
+            Console.WriteLine("Fibonacci bang vong lap: " + FiboLap(n));
+            Console.WriteLine("Fibonacci bang de quy: " + FiboDeQuy(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 5
+
+Nhap n: 3
+Fibonacci bang vong lap: 2
+Fibonacci bang de quy: 2
+```
+
+ ### bài6
+```csharp
+namespace BTTH1
+{
+    static class B6C2
+    {
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap so phan tu", 10);
+
+            if (n <= 0) return;
+
+            int[] a = hamhotro.TaoMangNgauNhien(n, 100);
+
+            Console.WriteLine("Mang ban dau:");
+            hamhotro.InMang(a);
+
+            for (int i = 0; i < n - 1; i++)
+            {
+                for (int j = 0; j < n - 1 - i; j++)
+                {
+                    if (a[j] > a[j + 1])
+                        hamhotro.Swap(a, j, j + 1);
+                }
+            }
+
+            Console.WriteLine("Mang tang dan:");
+            hamhotro.InMang(a);
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 10
+
+Nhap so phan tu (Enter = 10):
+Mang ban dau:
+63 38 23 80 41 51 6 9 30 92
+Mang tang dan:
+6 9 23 30 38 41 51 63 80 92
+```
+
+---
+
+
+###chương3
+
+
+ ### bài1
+```csharp
+namespace BTTH1
+{
+    static class B1C3
+    {
+        static int Tong(int n)
+        {
+            if (n == 1)
+                return 1;
+
+            return Tong(n - 1) + n;
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 10);
+if (n < 1) return;
+
+            Console.WriteLine("Tong = " + Tong(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 11
+
+Nhap n (Enter = 10):
+Tong = 55
+```
+
+ ### bài2
+```csharp
+namespace BTTH1
+{
+    static class B2C3
+    {
+        static int TongBinhPhuong(int n)
+        {
+            if (n == 1)
+                return 1;
+
+            return TongBinhPhuong(n - 1) + n * n;
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 5);
+
+            if (n < 1) return;
+
+            Console.WriteLine("Tong binh phuong = "
+                + TongBinhPhuong(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 12
+
+Nhap n (Enter = 5):
+Tong binh phuong = 55
+```
+
+
+ ### bài3
+```csharp
+namespace BTTH1
+{
+    static class B3C3
+    {
+        static double TongNghichDao(int n)
+        {
+            if (n == 1)
+                return 1;
+
+            return TongNghichDao(n - 1) + 1.0 / n;
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 5);
+
+            if (n < 1) return;
+
+            Console.WriteLine("Tong = " + TongNghichDao(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 13
+
+Nhap n (Enter = 5):
+Tong = 2.283333333333333
+```
+
+
+
+ ### bài4
+```csharp
+namespace BTTH1
+{
+    static class B4C3
+    {
+        static double LuyThua(double x, int n)
+        {
+            if (n == 0)
+                return 1;
+
+            return x * LuyThua(x, n - 1);
+        }
+
+        public static void Run()
+        {
+            double x = 2;
+            int n = hamhotro.DocSo("Nhap so mu n", 5);
+
+            if (n < 0) return;
+
+            Console.WriteLine("Ket qua = " + LuyThua(x, n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 14
+
+Nhap so mu n (Enter = 5):
+Ket qua = 32
+```
+
+
+
+ ### bài5
+```csharp
+namespace BTTH1
+{
+    static class B5C3
+    {
+        static int UocLeMax(int n)
+        {
+            if (n % 2 == 1)
+                return n;
+
+            return UocLeMax(n / 2);
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 100);
+
+            if (n <= 0) return;
+
+            Console.WriteLine("Uoc le lon nhat = "
+                + UocLeMax(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 15
+
+Nhap n (Enter = 100):
+Uoc le lon nhat = 25
+```
+
+
+
+ ### bài6
+```csharp
+namespace BTTH1
+{
+    static class B6C3
+    {
+        static int UCLN(int a, int b)
+        {
+            if (a % b == 0)
+                return b;
+
+            return UCLN(b, a % b);
+        }
+
+        public static void Run()
+        {
+            int a = hamhotro.DocSo("Nhap a", 24);
+            int b = hamhotro.DocSo("Nhap b", 12);
+
+            if (a <= 0 || b <= 0)
+            {
+                Console.WriteLine("Nhap so duong!");
+                return;
+            }
+
+            Console.WriteLine("UCLN = " + UCLN(a, b));
+        }
+    }
+}
+```
+
+
+#### kết quả
+Chọn bài: 16
+Nhap a (Enter = 24):
+Nhap b (Enter = 12):
+UCLN = 12
+```text
+
+```
+
+
+
+ ### bài7
+```csharp
+namespace BTTH1
+{
+    static class B7C3
+    {
+        static int SoChuSo(int n)
+        {
+            if (n == 0)
+                return 0;
+
+            return SoChuSo(n / 10) + 1;
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 12345);
+
+            if (n <= 0) return;
+
+            Console.WriteLine("So chu so = " + SoChuSo(n));
+        }
+    }
+}
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 17
+
+Nhap n (Enter = 12345):
+So chu so = 5
+```
+
+
+ ### bài8
+```csharp
+namespace BTTH1
+{
+    static class B8C3
+    {
+        static double Can(int i, int n)
+        {
+            if (i == n)
+                return Math.Sqrt(n);
+
+            return Math.Sqrt(i + Can(i + 1, n));
+        }
+
+        public static void Run()
+        {
+            int n = hamhotro.DocSo("Nhap n", 5);
+
+            if (n < 1) return;
+
+            Console.WriteLine("Ket qua = " + Can(1, n));
+        }
+    }
+}
+
+```
+
+
+#### kết quả
+
+```text
+Chọn bài: 18
+
+Nhap n (Enter = 5):
+Ket qua = 1.7562384875823431
+```
