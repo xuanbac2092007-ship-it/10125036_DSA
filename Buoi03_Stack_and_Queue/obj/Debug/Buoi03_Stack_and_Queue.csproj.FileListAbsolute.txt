@@ -1,7 +1,0 @@
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\bin\Debug\Buoi03_Stack_and_Queue.exe.config
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\bin\Debug\Buoi03_Stack_and_Queue.exe
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\bin\Debug\Buoi03_Stack_and_Queue.pdb
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\obj\Debug\Buoi03_Stack_and_Queue.csproj.AssemblyReference.cache
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\obj\Debug\Buoi03_Stack_and_Queue.csproj.CoreCompileInputs.cache
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\obj\Debug\Buoi03_Stack_and_Queue.exe
-C:\Buoi03_STack_and_Queue\Buoi03_Stack_and_Queue\Buoi03_Stack_and_Queue\obj\Debug\Buoi03_Stack_and_Queue.pdb
