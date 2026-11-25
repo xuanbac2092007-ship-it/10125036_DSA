@@ -1,0 +1,7 @@
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\obj\Debug\Buoi02_DanhSach.csproj.AssemblyReference.cache
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\obj\Debug\Buoi02_DanhSach.csproj.CoreCompileInputs.cache
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\bin\Debug\Buoi02_DanhSach.exe.config
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\bin\Debug\Buoi02_DanhSach.exe
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\bin\Debug\Buoi02_DanhSach.pdb
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\obj\Debug\Buoi02_DanhSach.exe
+C:\Buoi02_DanhSach\Buoi02_DanhSach\Buoi02_DanhSach\obj\Debug\Buoi02_DanhSach.pdb
